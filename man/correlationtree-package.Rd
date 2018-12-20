@@ -8,6 +8,14 @@
 \description{
 This package provides a set of functions to create correlation trees and use them.
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/abichat/correlationtree}
+  \item Report bugs at \url{https://github.com/abichat/correlationtree/issues}
+}
+
+}
 \author{
 \strong{Maintainer}: Antoine Bichat \email{abichat@enterome.com}
 

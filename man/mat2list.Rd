@@ -13,5 +13,10 @@ mat2list(mat)
 a list
 }
 \description{
-Matrix to list
+Convert a matrix of abundance to a list.
+}
+\examples{
+m <- matrix(1:12, ncol = 3)
+rownames(m) <- letters[1:4]
+mat2list(m)
 }

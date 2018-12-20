@@ -1,0 +1,13 @@
+Package: correlationtree
+Title: Functions about correlation tree
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Antoine",
+           family = "Bichat",
+           role = c("aut", "cre"),
+           email = "abichat@enterome.com")
+Description: This package provides a set of functions to create correlation trees and use them.
+License: CC0
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.1.1

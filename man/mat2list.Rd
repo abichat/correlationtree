@@ -7,13 +7,13 @@
 mat2list(mat)
 }
 \arguments{
-\item{mat}{matrix}
+\item{mat}{matrix.}
 }
 \value{
-a list
+\code{mat2list} returns a named list whose each entry is a row of the original matrix.
 }
 \description{
-Convert a matrix of abundance to a list.
+Convert a named matrix of abundance to a named list.
 }
 \examples{
 m <- matrix(1:12, ncol = 3)

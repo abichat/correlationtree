@@ -7,7 +7,7 @@
 shuffle_tiplabels(tree)
 }
 \arguments{
-\item{tree}{an object of class \code{"phylo"}}
+\item{tree}{an object of class \code{"phylo"}.}
 }
 \value{
 The same tree with permuted tip labels.

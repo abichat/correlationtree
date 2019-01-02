@@ -7,7 +7,7 @@
 df2mat(df, col = 1)
 }
 \arguments{
-\item{df}{a class data.}
+\item{df}{a data frame.}
 
 \item{col}{integer giving the column to be passed as row names.}
 }

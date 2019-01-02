@@ -1,6 +1,6 @@
 #' Shuffle tip labels
 #' @description Shuffle tip labels of a \code{"phylo"} object
-#' @param tree an object of class \code{"phylo"}
+#' @param tree an object of class \code{"phylo"}.
 #' @return The same tree with permuted tip labels.
 #' @export
 #' @importFrom ape rtree

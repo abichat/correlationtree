@@ -1,6 +1,6 @@
 #' Dataframe to matrix
 #' @description Convert an abundance dataframe to a named matrix.
-#' @param df a class data.
+#' @param df a data frame.
 #' @param col integer giving the column to be passed as row names.
 #' @return \code{df2mat} returns a named matrix.
 #' @details Use \code{col = 0} if there are already row names (or use \code{as.matrix(df)} directly).

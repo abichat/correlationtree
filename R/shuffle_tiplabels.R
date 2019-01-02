@@ -3,6 +3,7 @@
 #' @param tree an object of class \code{"phylo"}
 #' @return The same tree with permuted tip labels.
 #' @export
+#' @importFrom ape rtree
 #' @examples
 #' (tree <- ape::rtree(8))
 #' shuffle_tiplabels(tree)

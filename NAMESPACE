@@ -3,3 +3,4 @@
 export(df2mat)
 export(mat2list)
 export(shuffle_tiplabels)
+importFrom(ape,rtree)

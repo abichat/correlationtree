@@ -16,7 +16,7 @@ cross_cor(L, remove = TRUE, .names = names(L), ...)
 \item{...}{arguments to be passed to \code{\link[stats]{cor}} such as \code{method} (see details).}
 }
 \value{
-An object of class \code{dist} with all correlation between vectors.
+A similarity matrix of class \code{dist} with all correlation between vectors.
 }
 \description{
 Compute pairwise correlations within a list of vector.

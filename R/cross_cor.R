@@ -4,7 +4,7 @@
 #' @param remove logical. If \code{TRUE} (default), shared zeros are removed.
 #' @param .names character.
 #' @param ... arguments to be passed to \code{\link[stats]{cor}} such as \code{method} (see details).
-#' @return An object of class \code{dist} with all correlation between vectors.
+#' @return A similarity matrix of class \code{dist} with all correlation between vectors.
 #' @export
 #' @importFrom purrr map
 #' @importFrom stats as.dist cor
@@ -20,7 +20,7 @@
 #' cross_cor(L, remove = TRUE, method = "spearman")
 cross_cor <- function(L, remove = TRUE, .names = names(L), ...){
 
-  if(is.null(.names)) .names <- paste0("vec", seq_len(L))
+  if(is.null(.names)) .names <- paste0("vec", seq_along(L))
 
   if(remove){
     cors <- map(L,

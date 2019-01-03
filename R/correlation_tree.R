@@ -1,8 +1,8 @@
 #' Correlation tree
 #' @description Compute the correlation tree from an abundance table.
 #' @param table a dataframe or a matrix.
-#' @param col giving the column to be passed as row names.
-#' @param matrix logical. Default to \code{FALSE}.
+#' @param col integer giving the column to be passed as row names.
+#' @param matrix logical. Is table a matrix? Default to \code{FALSE}.
 #' @param remove logical. If \code{TRUE} (default), shared zeros between species are removed for the computation of the pairwise correlation coefficients.
 #' @param transformation character.
 #' @param ... arguments to be passed to \code{\link[stats]{cor}} such as \code{method} (see details).

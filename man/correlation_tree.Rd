@@ -10,9 +10,9 @@ correlation_tree(table, col = 1, matrix = FALSE, remove = TRUE,
 \arguments{
 \item{table}{a dataframe or a matrix.}
 
-\item{col}{giving the column to be passed as row names.}
+\item{col}{integer giving the column to be passed as row names.}
 
-\item{matrix}{logical. Default to \code{FALSE}.}
+\item{matrix}{logical. Is table a matrix? Default to \code{FALSE}.}
 
 \item{remove}{logical. If \code{TRUE} (default), shared zeros between species are removed for the computation of the pairwise correlation coefficients.}
 

@@ -25,7 +25,8 @@ cross_cor <- function(L, remove = TRUE, .names = names(L), ...){
   if(remove){
     cors <- map(L,
                 function(x, y) {sapply(y,
-                                       function(y, x) cor_wo_shared_zero(x, y, ...),
+                                       function(y, x) cor_wo_shared_zero(x, y,
+                                                                         ...),
                                        x = x)},
                 y = L)
   } else {

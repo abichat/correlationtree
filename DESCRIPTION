@@ -16,3 +16,5 @@ BugReports: https://github.com/abichat/correlationtree/issues
 Imports:
     purrr,
     ape
+Suggests: 
+    testthat

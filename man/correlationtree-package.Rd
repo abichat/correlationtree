@@ -6,7 +6,8 @@
 \alias{correlationtree-package}
 \title{correlationtree: Functions about correlation tree}
 \description{
-This package provides a set of functions to create correlation trees and use them.
+This package provides a set of functions to
+    create correlation trees and use them.
 }
 \seealso{
 Useful links:

@@ -9,7 +9,7 @@ taxtable2tree(df, collapse = TRUE, lineage_length = 1, root = "")
 \arguments{
 \item{df}{dataframe.}
 
-\item{collapse}{logical. Sould node with one child be vanished?}
+\item{collapse}{logical. Should node with one child be vanished?}
 
 \item{lineage_length}{double. Mean lineage length.}
 

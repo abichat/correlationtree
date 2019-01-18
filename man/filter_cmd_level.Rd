@@ -2,7 +2,7 @@
 % Please edit documentation in R/cmd_wrangling.R
 \name{filter_cmd_level}
 \alias{filter_cmd_level}
-\title{Filter at sepecific level}
+\title{Filter at specific level}
 \usage{
 filter_cmd_level(dataset, level = c("kingdom", "phylum", "class",
   "order", "family", "genus", "species", "strain"))
@@ -10,8 +10,11 @@ filter_cmd_level(dataset, level = c("kingdom", "phylum", "class",
 \arguments{
 \item{dataset}{dataframe.}
 
-\item{level}{characher. One of \code{c("kingdom", "phylum", "class",
+\item{level}{character. One of \code{c("kingdom", "phylum", "class",
 "order", "family", "genus", "species", "strain")}.}
+}
+\value{
+dataframe with only desired level entries.
 }
 \description{
 Filter a dataset with CMD formatting

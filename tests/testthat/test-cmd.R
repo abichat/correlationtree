@@ -1,6 +1,7 @@
 context("CMD")
 
-clades <- c("k__Bacteria", "k__Bacteria|p__Proteobacteria",
+clades <- c("k__Bacteria",
+            "k__Bacteria|p__Proteobacteria",
             "k__Bacteria|p__Verrucomicrobia",
             "k__Bacteria|p__Firmicutes|c__Clostridia",
             "k__Bacteria|p__Verrucomicrobia|c__Verrucomicrobiae|o__Verrucomicrobiales",
@@ -19,18 +20,52 @@ df <- data.frame(Clade = clades,
 
 #### filter_cmd_level() ####
 
-test_that("filter_cmd_level() returns the correct output",{
+test_that("filter_cmd_level() returns the correct output", {
   expect_equal(ncol(filter_cmd_level(df, level = "kingdom")), ncol(df))
   expect_equal(colnames(filter_cmd_level(df, level = "phylum")), colnames(df))
   expect_equal(class(filter_cmd_level(df, level = "class")), class(df))
 })
 
-test_that("filter_cmd_level() with bad level returns an error",{
+test_that("filter_cmd_level() with bad levels returns an error", {
   expect_error(ncol(filter_cmd_level(df, level = "Species")))
 })
 
-test_that("filter_cmd_level() returns the correct output",{
+test_that("filter_cmd_level() returns the correct output", {
   expect_equal(filter_cmd_level(df, level = "order"), dplyr::slice(df, 5))
   expect_equal(filter_cmd_level(df, level = "genus")$Clade, df[7:8, 1])
   expect_equal(filter_cmd_level(df, level = "species"), dplyr::slice(df, 9:10))
 })
+
+
+#### compute_cmd_taxtable() ####
+
+test_that("compute_cmd_taxtable() gives the correct output", {
+  expect_equal(compute_cmd_taxtable(clades[2:3]),
+               data.frame(kingdom = rep("Bacteria", 2),
+                          phylum = c("Proteobacteria", "Verrucomicrobia")))
+  expect_equal(colnames(compute_cmd_taxtable(clades[8])),
+               c("kingdom", "phylum", "class", "order", "family", "genus"))
+  expect_equal(nrow(compute_cmd_taxtable(clades[9:10])), 2)
+})
+
+test_that("compute_cmd_taxtable() with clades at different
+          levels returns an error", {
+  expect_error(compute_cmd_taxtable(clades))
+})
+
+#### clean_cmd_clade() ####
+
+test_that("clean_cmd_clade() gives the correct output", {
+  expect_equal(clean_cmd_clade(clades[6]), "Streptococcaceae")
+  expect_equal(clean_cmd_clade(clades[2:3]), c("Proteobacteria",
+                                               "Verrucomicrobia"))
+  expect_equal(clean_cmd_clade(clades[9:10]), c("Rothia_dentocariosa",
+                                                "Delftia_unclassified"))
+
+})
+
+test_that("clean_cmd_clade() with clades at different
+          levels returns an error", {
+  expect_error(clean_cmd_clade(clades))
+})
+

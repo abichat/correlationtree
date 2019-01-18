@@ -1,7 +1,7 @@
 #' Taxonomic table to taxonomic tree
 #' @description Compute a taxonomic tree of class phylo from taxonomic table.
 #' @param df dataframe.
-#' @param collapse logical. Sould node with one child be vanished?
+#' @param collapse logical. Should node with one child be vanished?
 #' @param lineage_length double. Mean lineage length.
 #' @param root character. Name of the root.
 #'

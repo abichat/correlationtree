@@ -23,6 +23,7 @@ Suggests:
     knitr,
     phyloseq,
     rmarkdown,
+    spelling,
     structSSI,
     testthat,
     tidyverse,
@@ -30,5 +31,6 @@ Suggests:
 VignetteBuilder: 
     knitr
 Encoding: UTF-8
+Language: en-US
 LazyData: true
 RoxygenNote: 6.1.1

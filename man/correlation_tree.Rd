@@ -5,7 +5,7 @@
 \title{Correlation tree}
 \usage{
 correlation_tree(table, col = 1, matrix = FALSE, remove = TRUE,
-  transformation = c("reverse", "abs", "log"), ...)
+  fill = FALSE, transformation = c("reverse", "abs", "log"), ...)
 }
 \arguments{
 \item{table}{a dataframe or a matrix.}
@@ -15,6 +15,8 @@ correlation_tree(table, col = 1, matrix = FALSE, remove = TRUE,
 \item{matrix}{logical. Is table a matrix? Default to \code{FALSE}.}
 
 \item{remove}{logical. If \code{TRUE} (default), shared zeros between species are removed for the computation of the pairwise correlation coefficients.}
+
+\item{fill}{logical. If \code{TRUE}, \code{NA} are set to 0. Default to \code{FALSE}.}
 
 \item{transformation}{character.}
 

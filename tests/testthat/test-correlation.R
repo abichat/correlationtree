@@ -7,6 +7,10 @@ Z <- c(-1, 2, 0, 0, 2, 2, 1, 3)
 x <- c(1, -1, 0, 5, 4, 3)
 y <- c(3, -2, 4, 0, 4, 8)
 
+A <- rep(0, 8)
+B <- rep(1, 8)
+mat_sd0 <- matrix(c(X, Y, Z, A, B), byrow = TRUE, ncol = 8)
+
 #### cor_wo_shared_zero() ####
 
 test_that("cor_wo_shared_zero() is like cor()", {
@@ -43,12 +47,17 @@ test_that("correlation_tree(.) is a phylo", {
   expect_is(correlation_tree(swiss, matrix = TRUE), "phylo")
 })
 
-test_that("correlation_tree(.) keeps names", {
+test_that("correlation_tree() keeps names", {
   expect_equal(length(correlation_tree(iris, col = 5)$tip.label), nrow(iris))
   expect_equal(sort(correlation_tree(swiss, col = 0)$tip.label),
                sort(rownames(swiss)))
   expect_equal(sort(correlation_tree(swiss, matrix = TRUE)$tip.label),
                sort(rownames(swiss)))
+})
+
+test_that("correlation_tree() fills correctly", {
+  expect_error(suppressWarnings(correlation_tree(mat_sd0, matrix = TRUE)))
+  expect_warning(correlation_tree(mat_sd0, matrix = TRUE, fill = TRUE))
 })
 
 # Add tests on heights and distances

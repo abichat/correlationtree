@@ -5,7 +5,8 @@ Authors@R:
     person(given = "Antoine",
            family = "Bichat",
            role = c("aut", "cre"),
-           email = "abichat@enterome.com")
+           email = "abichat@enterome.com",
+           comment = c(ORCID = "0000-0001-6599-7081"))
 Description: This package provides a set of functions to
     create correlation trees and use them.
 License: CC0
@@ -23,7 +24,6 @@ Suggests:
     knitr,
     phyloseq,
     rmarkdown,
-    spelling,
     structSSI,
     testthat,
     tidyverse,

@@ -3,21 +3,26 @@
 #' @param dataset dataframe.
 #' @param level character. One of \code{c("kingdom", "phylum", "class",
 #' "order", "family", "genus", "species", "strain")}.
+#' @param col unquoted expression. Name of the column used for filtering.
+#' Default to Clade
 #' @return dataframe with only desired level entries.
 #' @export
+#' @importFrom dplyr enquo
 #' @importFrom dplyr filter
 #' @importFrom stringr str_sub
 #' @importFrom stringr str_detect
 #' @examples
-filter_cmd_level <- function(dataset,
+filter_cmd_level <- function(dataset, col = Clade,
                          level = c("kingdom", "phylum", "class", "order",
                                    "family", "genus", "species", "strain")) {
 
   level <- match.arg(level)
 
+  col <- enquo(col)
+
   letter <- ifelse(level == "strain", "t", str_sub(level, end = 1))
 
-  filter(dataset, str_detect(Clade, paste0(letter, "__[a-zA-Z0-9_]*$")))
+  filter(dataset, str_detect(!!col, paste0(letter, "__[a-zA-Z0-9_]*$")))
 }
 
 

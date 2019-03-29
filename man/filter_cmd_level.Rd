@@ -4,11 +4,14 @@
 \alias{filter_cmd_level}
 \title{Filter at specific level}
 \usage{
-filter_cmd_level(dataset, level = c("kingdom", "phylum", "class",
-  "order", "family", "genus", "species", "strain"))
+filter_cmd_level(dataset, col = Clade, level = c("kingdom", "phylum",
+  "class", "order", "family", "genus", "species", "strain"))
 }
 \arguments{
 \item{dataset}{dataframe.}
+
+\item{col}{unquoted expression. Name of the column used for filtering.
+Default to Clade}
 
 \item{level}{character. One of \code{c("kingdom", "phylum", "class",
 "order", "family", "genus", "species", "strain")}.}

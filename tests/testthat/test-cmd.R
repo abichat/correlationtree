@@ -36,6 +36,17 @@ test_that("filter_cmd_level() returns the correct output", {
   expect_equal(filter_cmd_level(df, level = "species"), dplyr::slice(df, 9:10))
 })
 
+df2 <- `colnames<-`(df, c("Taxa", "a", "b", "c"))
+
+test_that("filter_cmd_level() works with tidyeval", {
+  expect_equal(filter_cmd_level(df2, col = Taxa, level = "order"),
+               dplyr::slice(df2, 5))
+  expect_equal(filter_cmd_level(df2, Taxa, level = "genus")$Taxa,
+               df2[7:8, 1])
+  expect_equal(filter_cmd_level(df2, Taxa, level = "species"),
+               dplyr::slice(df2, 9:10))
+})
+
 
 #### compute_cmd_taxtable() ####
 

@@ -18,7 +18,7 @@ Useful links:
 
 }
 \author{
-\strong{Maintainer}: Antoine Bichat \email{abichat@enterome.com}
+\strong{Maintainer}: Antoine Bichat \email{abichat@enterome.com} (0000-0001-6599-7081)
 
 }
 \keyword{internal}

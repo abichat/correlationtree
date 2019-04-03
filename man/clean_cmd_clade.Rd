@@ -4,14 +4,10 @@
 \alias{clean_cmd_clade}
 \title{Clean clade}
 \usage{
-clean_cmd_clade(x)
-}
-\arguments{
-\item{x}{character. The vector of clades with CMD format.}
+clean_cmd_clade(...)
 }
 \value{
-\code{clean_cmd_clade()} returns a character with
-same length as \code{x}.
+error
 }
 \description{
 Returns only the last level name.

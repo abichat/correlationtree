@@ -1,70 +1,27 @@
 #' Filter at specific level
 #' @description Filter a dataset with CMD formatting
-#' @param dataset dataframe.
-#' @param level character. One of \code{c("kingdom", "phylum", "class",
-#' "order", "family", "genus", "species", "strain")}.
-#' @param col unquoted expression. Name of the column used for filtering.
-#' Default to Clade
-#' @return dataframe with only desired level entries.
+#' @return error
 #' @export
-#' @importFrom dplyr enquo
-#' @importFrom dplyr filter
-#' @importFrom stringr str_sub
-#' @importFrom stringr str_detect
-#' @examples
-filter_cmd_level <- function(dataset, col = Clade,
-                         level = c("kingdom", "phylum", "class", "order",
-                                   "family", "genus", "species", "strain")) {
-
-  level <- match.arg(level)
-
-  col <- enquo(col)
-
-  letter <- ifelse(level == "strain", "t", str_sub(level, end = 1))
-
-  filter(dataset, str_detect(!!col, paste0(letter, "__[a-zA-Z0-9_]*$")))
+filter_cmd_level <- function(...) {
+  stop("filter_cmd_level() is deprecated, use yatah::is_rank() instead.")
 }
 
 
 #' Create taxonomic table
 #' @description Create a taxonomic table from CMD format for clades.
-#' @param x character. The vector of clades with CMD format.
-#' @return \code{compute_cmd_taxtable()} returns a data.frame.
+#' @return error
 #' @export
-#' @importFrom stringr str_remove_all
-#' @importFrom stringr str_split
-#' @importFrom purrr map
-#' @importFrom purrr transpose
-#' @examples
-compute_cmd_taxtable <- function(x){
-  levels <- c("kingdom", "phylum", "class", "order", "family",
-             "genus", "species", "strain")
-
-  N <- str_count(x, "\\|")
-  stopifnot(all(N == N[1]))
-
-  list <- str_split(str_remove_all(unique(x), "\\|"), ".__")
-  list <- map(list, ~ .[-1])
-
-  list <- map(transpose(list, .names = levels[1:(N[1] + 1)]), unlist)
-  return(as.data.frame(list))
+compute_cmd_taxtable <- function(...){
+  stop("compute_cmd_taxtable() is deprecated, use yatah::taxtable() instead.")
 }
 
 
 #' Clean clade
 #' @description Returns only the last level name.
-#' @param x character. The vector of clades with CMD format.
-#' @return \code{clean_cmd_clade()} returns a character with
-#' same length as \code{x}.
+#' @return error
 #' @export
-#' @importFrom stringr str_remove
-#' @importFrom stringr str_count
-#' @examples
-clean_cmd_clade <- function(x){
-
-  stopifnot(all(str_count(x, "\\|") == str_count(x[1], "\\|")))
-
-  return(str_remove(x, ".*__"))
+clean_cmd_clade <- function(...){
+  stop("clean_cmd_clade() is deprecated, use yatah::last_rank() instead.")
 }
 
 

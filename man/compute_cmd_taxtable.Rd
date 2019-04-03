@@ -4,13 +4,10 @@
 \alias{compute_cmd_taxtable}
 \title{Create taxonomic table}
 \usage{
-compute_cmd_taxtable(x)
-}
-\arguments{
-\item{x}{character. The vector of clades with CMD format.}
+compute_cmd_taxtable(...)
 }
 \value{
-\code{compute_cmd_taxtable()} returns a data.frame.
+error
 }
 \description{
 Create a taxonomic table from CMD format for clades.

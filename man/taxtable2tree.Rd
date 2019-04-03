@@ -4,19 +4,10 @@
 \alias{taxtable2tree}
 \title{Taxonomic table to taxonomic tree}
 \usage{
-taxtable2tree(df, collapse = TRUE, lineage_length = 1, root = "")
-}
-\arguments{
-\item{df}{dataframe.}
-
-\item{collapse}{logical. Should node with one child be vanished?}
-
-\item{lineage_length}{double. Mean lineage length.}
-
-\item{root}{character. Name of the root.}
+taxtable2tree(...)
 }
 \value{
-\code{taxtable2tree()} returns a "phylo" object.
+error
 }
 \description{
 Compute a taxonomic tree of class phylo from taxonomic table.

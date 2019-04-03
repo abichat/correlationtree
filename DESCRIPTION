@@ -1,6 +1,6 @@
 Package: correlationtree
 Title: Functions about correlation tree
-Version: 0.0.0.9001
+Version: 0.0.0.9002
 Authors@R: 
     person(given = "Antoine",
            family = "Bichat",
@@ -12,18 +12,18 @@ Description: This package provides a set of functions to
 License: CC0
 URL: https://github.com/abichat/correlationtree
 BugReports: https://github.com/abichat/correlationtree/issues
-Imports:
+Imports: 
     ape,
-    dplyr,
     purrr,
     stats,
-    stringr
+    yatah
 Suggests: 
     ggtree,
     igraph,
     knitr,
     phyloseq,
     rmarkdown,
+    spelling,
     structSSI,
     testthat,
     tidyverse,

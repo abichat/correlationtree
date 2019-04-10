@@ -1,10 +1,12 @@
 BH
+Billera
 clade
 clades
 CMD
 edgelist
 HFDR
 kendall
+multiphylo
 OTUs
 pearson
 phylo
@@ -13,4 +15,5 @@ spearman
 StructSSI
 ultrametric
 Unadjusted
+Vogtmann
 yatah

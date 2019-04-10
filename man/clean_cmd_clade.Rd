@@ -6,6 +6,9 @@
 \usage{
 clean_cmd_clade(...)
 }
+\arguments{
+\item{...}{Nothing}
+}
 \value{
 error
 }

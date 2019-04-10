@@ -8,6 +8,7 @@
 #' @export
 #'
 #' @examples
+#' sample_boot(swiss)
 sample_boot <- function(table, matrix = FALSE, col = 1){
 
   if(col == 0 | matrix){

@@ -1,5 +1,6 @@
 #' Taxonomic table to taxonomic tree
 #' @description Compute a taxonomic tree of class phylo from taxonomic table.
+#' @param ... Nothing
 #' @return error
 #' @export
 taxtable2tree <- function(...){

@@ -19,3 +19,6 @@ A table.
 \description{
 Variable bootstrap
 }
+\examples{
+sample_boot(swiss)
+}

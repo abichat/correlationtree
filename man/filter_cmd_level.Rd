@@ -6,6 +6,9 @@
 \usage{
 filter_cmd_level(...)
 }
+\arguments{
+\item{...}{Nothing}
+}
 \value{
 error
 }

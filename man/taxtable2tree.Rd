@@ -6,6 +6,9 @@
 \usage{
 taxtable2tree(...)
 }
+\arguments{
+\item{...}{Nothing}
+}
 \value{
 error
 }

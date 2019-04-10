@@ -6,6 +6,9 @@
 \usage{
 compute_cmd_taxtable(...)
 }
+\arguments{
+\item{...}{Nothing}
+}
 \value{
 error
 }

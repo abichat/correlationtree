@@ -1,6 +1,6 @@
 # correlationtree 0.0.0.9002
 
-* Deprecated functions. Use {yatah} instead.
+* Removed functions. Use {yatah} instead.
 
 # correlationtree 0.0.0.9001
 

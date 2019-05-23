@@ -18,7 +18,7 @@ correlation_tree(table, col = 1, matrix = FALSE, remove = TRUE,
 
 \item{fill}{logical. If \code{TRUE}, \code{NA} are set to 0. Default to \code{FALSE}.}
 
-\item{transformation}{function or character.}
+\item{transformation}{function or character. Transformation to apply to each element of the matrix.}
 
 \item{...}{arguments to be passed to \code{\link[stats]{cor}} such as \code{method} (see details).}
 }

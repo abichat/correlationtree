@@ -1,7 +1,7 @@
 #' Convert a similarity matrix into a distance matrix
 #' @description Convert a similarity matrix into a distance matrix.
 #' @param sim a similarity matrix of class \code{"matrix"} or \code{"dist"}
-#' @param transformation function or character.
+#' @param transformation function or character. Transformation to apply to each element of the matrix.
 #' @return \code{sim2dist} returns an object of the same class as the input \code{sim}.
 #' @export
 #' @importFrom stats runif
@@ -18,6 +18,6 @@ sim2dist <- function(sim, transformation = "1-x"){
     if(transformation == "1-x") return(1-sim)
     if(transformation == "1-absx") return(1-abs(sim))
   } else {
-    return(transformation(sim))
+    return(apply(sim, MARGIN = 1:2, transformation))
   }
 }

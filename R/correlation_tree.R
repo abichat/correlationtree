@@ -5,7 +5,7 @@
 #' @param matrix logical. Is table a matrix? Default to \code{FALSE}.
 #' @param remove logical. If \code{TRUE} (default), shared zeros between species are removed for the computation of the pairwise correlation coefficients.
 #' @param fill logical. If \code{TRUE}, \code{NA} are set to 0. Default to \code{FALSE}.
-#' @param transformation character.
+#' @inheritParams sim2dist
 #' @param ... arguments to be passed to \code{\link[stats]{cor}} such as \code{method} (see details).
 #' @return \code{correlation_tree} returns a "phylo" object.
 #' @details For \code{method}: one of "pearson" (default), "kendall", or "spearman".
@@ -22,7 +22,7 @@
 #' plot(correlation_tree(df, method = "spearman"))
 correlation_tree <- function(table, col = 1, matrix = FALSE,
                              remove = TRUE, fill = FALSE,
-                             transformation = c("reverse", "abs", "log"), ...){
+                             transformation = "1-x", ...){
   if(matrix) col <- 0
   L <- mat2list(df2mat(table, col))
   sim <- cross_cor(L, remove, ...)

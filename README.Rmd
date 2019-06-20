@@ -1,0 +1,34 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+# correlationtree <img src='man/figures/logo.png' align="right" height="138" />
+<!-- badges: start -->
+```{r, echo = FALSE}
+version <- as.vector(read.dcf('DESCRIPTION')[, 'Version'])
+version <- gsub('-', '.', version)
+```
+[![license](https://img.shields.io/badge/license-CC0-lightgrey.svg)](https://choosealicense.com/)
+[![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+[![packageversion](https://img.shields.io/badge/Package%20version-`r version`-orange.svg?style=flat-square)](commits/master)
+[![Last-changedate](https://img.shields.io/badge/last%20change-`r gsub('-', '--', Sys.Date())`-yellowgreen.svg)](https://github.com/abichat/correlationtree/commits/master)
+<!-- badges: end -->
+
+## Installation
+
+You can install the released version of correlationtree from [CRAN](https://CRAN.R-project.org) with:
+
+```{r, eval=FALSE}
+# install.packages("remotes")
+remotes::install_github("abichat/correlationtree")
+```

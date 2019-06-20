@@ -58,6 +58,7 @@ sim[diag] <- 1
 
 test_that("sim2dist() keeps dimensions", {
   expect_equal(dim(sim2dist(sim)), dim(sim))
-  expect_equal(dim(sim2dist(sim, transformation = "abs")), dim(sim))
-  expect_equal(dim(sim2dist(sim, transformation = "log")), dim(sim))
+  expect_equal(dim(sim2dist(sim, transformation = "1-absx")), dim(sim))
+  expect_equal(dim(sim2dist(sim, transformation = function(x) -log(x^2))),
+               dim(sim))
 })

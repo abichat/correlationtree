@@ -4,12 +4,12 @@
 \alias{sim2dist}
 \title{Convert a similarity matrix into a distance matrix}
 \usage{
-sim2dist(sim, transformation = c("reverse", "abs", "log"))
+sim2dist(sim, transformation = "1-x")
 }
 \arguments{
-\item{sim}{a similarity matrix of class \code{"matrix"} or \code{"dist"}}
+\item{sim}{a similarity matrix of class \code{"matrix"} or \code{"dist"}.}
 
-\item{transformation}{character. See details.}
+\item{transformation}{function or character. Transformation to apply to each element of the matrix.}
 }
 \value{
 \code{sim2dist} returns an object of the same class as the input \code{sim}.
@@ -24,5 +24,5 @@ sim <- (mat + t(mat)) / 2
 diag <- n * (seq_len(n) - 1) + seq_len(n)
 sim[diag] <- 1
 sim2dist(sim)
-sim2dist(as.dist(sim), transformation = "log")
+sim2dist(as.dist(sim), transformation = "1-absx")
 }

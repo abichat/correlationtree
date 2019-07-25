@@ -1,6 +1,6 @@
 Package: correlationtree
 Title: Functions about correlation tree
-Version: 0.0.0.9002
+Version: 0.0.0.9003
 Authors@R: 
     person(given = "Antoine",
            family = "Bichat",
@@ -20,20 +20,11 @@ Imports:
     magrittr,
     purrr,
     rlang,
-    stats
+    stats,
+    StructFDR
 Suggests: 
-    ggtree,
-    igraph,
-    knitr,
-    phyloseq,
-    rmarkdown,
     spelling,
-    structSSI,
-    testthat,
-    tidyverse,
-    VennDiagram
-VignetteBuilder: 
-    knitr
+    testthat
 Encoding: UTF-8
 Language: en-US
 LazyData: true

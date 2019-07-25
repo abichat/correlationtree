@@ -24,7 +24,8 @@ Imports:
     StructFDR
 Suggests: 
     spelling,
-    testthat
+    testthat,
+    covr
 Encoding: UTF-8
 Language: en-US
 LazyData: true

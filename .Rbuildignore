@@ -3,3 +3,5 @@
 ^LICENSE\.md$
 ^correlationtree\.Rproj$
 ^\.Rproj\.user$
+^\.travis\.yml$
+^codecov\.yml$

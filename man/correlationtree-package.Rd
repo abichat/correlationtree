@@ -6,6 +6,8 @@
 \alias{correlationtree-package}
 \title{correlationtree: Functions about correlation tree}
 \description{
+\if{html}{\figure{logo.png}{options: align='right'}}
+
 This package provides a set of functions to
     create correlation trees and use them.
 }

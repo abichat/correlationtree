@@ -68,7 +68,7 @@ TreeFDR2 <- function (X, Y, tree, test.func, perm.func, eff.sign = TRUE,
   }
   null.ind <- test.obs$p.value >= quantile(test.obs$p.value,
                                            1 - q.cutoff)
-  z.obs <- StructFDR::Ztransform(test.obs$p.value, test.obs$e.sign, eff.sign)
+  z.obs <- Ztransform(test.obs$p.value, test.obs$e.sign, eff.sign)
   cat("Test on permuted data sets  ...\n")
   z.perm <- z.perm2 <- matrix(NA, nrow(X), B)
   for (i in 1:B) {
@@ -79,7 +79,7 @@ TreeFDR2 <- function (X, Y, tree, test.func, perm.func, eff.sign = TRUE,
     X.perm <- perm.obj$X
     Y.perm <- perm.obj$Y
     test.perm <- test.func(X.perm, Y.perm, ...)
-    z.perm[, i] <- z.perm2[, i] <- StructFDR::Ztransform(test.perm$p.value,
+    z.perm[, i] <- z.perm2[, i] <- Ztransform(test.perm$p.value,
                                                          test.perm$e.sign, eff.sign)
     z.perm2[!null.ind, i] <- z.obs[!null.ind]
   }

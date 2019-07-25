@@ -13,8 +13,7 @@
 
 ## Installation
 
-You can install the released version of correlationtree from
-[CRAN](https://CRAN.R-project.org) with:
+You can install **correlationtree** with:
 
 ``` r
 # install.packages("remotes")

@@ -1,6 +1,6 @@
 Package: correlationtree
 Title: Functions about correlation tree
-Version: 0.0.0.9003
+Version: 0.0.1
 Authors@R: 
     person(given = "Antoine",
            family = "Bichat",
@@ -29,4 +29,4 @@ Suggests:
 Encoding: UTF-8
 Language: en-US
 LazyData: true
-RoxygenNote: 6.1.1
+RoxygenNote: 7.0.2.9000

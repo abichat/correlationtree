@@ -6,7 +6,7 @@
 \alias{correlationtree-package}
 \title{correlationtree: Functions about correlation tree}
 \description{
-\if{html}{\figure{logo.png}{options: align='right'}}
+\if{html}{\figure{logo.png}{options: align='right' alt='logo' width='120'}}
 
 This package provides a set of functions to
     create correlation trees and use them.
@@ -20,7 +20,7 @@ Useful links:
 
 }
 \author{
-\strong{Maintainer}: Antoine Bichat \email{abichat@enterome.com} (0000-0001-6599-7081)
+\strong{Maintainer}: Antoine Bichat \email{abichat@enterome.com} (\href{https://orcid.org/0000-0001-6599-7081}{ORCID})
 
 }
 \keyword{internal}

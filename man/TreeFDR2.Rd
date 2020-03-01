@@ -4,8 +4,18 @@
 \alias{TreeFDR2}
 \title{False Discovery Rate (FDR) Control Integrating Prior Tree Structure for Microbiome Data}
 \usage{
-TreeFDR2(X, Y, tree, test.func, perm.func, eff.sign = TRUE, B = 20,
-  q.cutoff = 0.5, alpha = 1, ...)
+TreeFDR2(
+  X,
+  Y,
+  tree,
+  test.func,
+  perm.func,
+  eff.sign = TRUE,
+  B = 20,
+  q.cutoff = 0.5,
+  alpha = 1,
+  ...
+)
 }
 \arguments{
 \item{X}{a data matrix, rows are the features and columns are the samples.}
@@ -40,6 +50,9 @@ underlying structure assumption is considered to be very strong, robustness
 can be improved by decreasing the value to 0.5.}
 
 \item{...}{further arguments such as covariates to be passed to test.func}
+}
+\value{
+
 }
 \description{
 Modification of \code{StructFDR::TreeFDR} function to remove safety nets.

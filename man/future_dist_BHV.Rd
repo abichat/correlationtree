@@ -9,6 +9,9 @@ future_dist_BHV(multiphylo)
 \arguments{
 \item{multiphylo}{a multiphylo object}
 }
+\value{
+
+}
 \description{
 Wrapper around \code{distory::dist.multiPhylo()}.
 }

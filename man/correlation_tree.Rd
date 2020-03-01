@@ -4,8 +4,15 @@
 \alias{correlation_tree}
 \title{Correlation tree}
 \usage{
-correlation_tree(table, col = 1, matrix = FALSE, remove = TRUE,
-  fill = FALSE, transformation = "1-x", ...)
+correlation_tree(
+  table,
+  col = 1,
+  matrix = FALSE,
+  remove = TRUE,
+  fill = FALSE,
+  transformation = "1-x",
+  ...
+)
 }
 \arguments{
 \item{table}{a dataframe or a matrix.}

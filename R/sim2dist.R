@@ -20,10 +20,10 @@ sim2dist <- function(sim, transformation = "1-x"){
     if(transformation == "1-x") return(1-sim)
     if(transformation == "1-absx") return(1-abs(sim))
   } else {
-    if(class(sim) == "matrix") return(apply(sim, 1:2, transformation))
-    if(class(sim) == "dist") {
-      as.dist(apply(as.matrix(sim), 1:2, transformation),
-              diag = attr(sim, "Diag"), upper = attr(sim, "Upper"))
+    if(inherits(sim, "dist")) {
+      return(as.dist(apply(as.matrix(sim), 1:2, transformation),
+                     diag = attr(sim, "Diag"), upper = attr(sim, "Upper")))
     }
+    if(inherits(sim, "matrix")) return(apply(sim, 1:2, transformation))
   }
 }

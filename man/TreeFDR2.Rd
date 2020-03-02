@@ -52,7 +52,8 @@ can be improved by decreasing the value to 0.5.}
 \item{...}{further arguments such as covariates to be passed to test.func}
 }
 \value{
-
+A list composed of \code{p.adj}, \code{p.unadj}, \code{z.adj},
+\code{z.unadj}, \code{k} and \code{rho}.
 }
 \description{
 Modification of \code{StructFDR::TreeFDR} function to remove safety nets.

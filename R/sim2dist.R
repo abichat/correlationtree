@@ -1,8 +1,10 @@
 #' Convert a similarity matrix into a distance matrix
 #' @description Convert a similarity matrix into a distance matrix.
 #' @param sim a similarity matrix of class \code{"matrix"} or \code{"dist"}.
-#' @param transformation function or character. Transformation to apply to each element of the matrix.
-#' @return \code{sim2dist} returns an object of the same class as the input \code{sim}.
+#' @param transformation function or character. Transformation to apply
+#' to each element of the matrix.
+#' @return \code{sim2dist} returns an object of the same class as the
+#' input \code{sim}.
 #' @export
 #' @importFrom stats runif
 #' @examples

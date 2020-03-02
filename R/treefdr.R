@@ -34,10 +34,10 @@ PermFDR  <- getFromNamespace("PermFDR",  "StructFDR")
 
 #' @importFrom StructFDR Ztransform
 #' @importFrom stats cophenetic quantile
-#' @return
+#' @return A list composed of \code{p.adj}, \code{p.unadj}, \code{z.adj},
+#' \code{z.unadj}, \code{k} and \code{rho}.
 #' @export
 #'
-#' @examples
 TreeFDR2 <- function (X, Y, tree, test.func, perm.func, eff.sign = TRUE,
                       # adaptive = c("Fisher", "Overlap"), alt.FDR = c("BH", "Permutation"),
                       B = 20, q.cutoff = 0.5, alpha = 1, ...) {

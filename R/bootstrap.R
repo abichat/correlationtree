@@ -1,5 +1,5 @@
 #' Variable bootstrap
-#' @description
+#'
 #' @param table a dataframe or matrix
 #' @param matrix logical
 #' @param col integer. The column to keep

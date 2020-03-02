@@ -3,7 +3,8 @@
 #' @param df a data frame.
 #' @param col integer giving the column to be passed as row names.
 #' @return \code{df2mat} returns a named matrix.
-#' @details Use \code{col = 0} if there are already row names (or use \code{as.matrix(df)} directly).
+#' @details Use \code{col = 0} if there are already row names (or use
+#' \code{as.matrix(df)} directly).
 #' @export
 #' @examples
 #' df <- data.frame(Clade = letters[1:4], S1 = 1:4, S2 = 7:8)

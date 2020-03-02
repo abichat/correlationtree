@@ -9,10 +9,12 @@ sim2dist(sim, transformation = "1-x")
 \arguments{
 \item{sim}{a similarity matrix of class \code{"matrix"} or \code{"dist"}.}
 
-\item{transformation}{function or character. Transformation to apply to each element of the matrix.}
+\item{transformation}{function or character. Transformation to apply
+to each element of the matrix.}
 }
 \value{
-\code{sim2dist} returns an object of the same class as the input \code{sim}.
+\code{sim2dist} returns an object of the same class as the
+input \code{sim}.
 }
 \description{
 Convert a similarity matrix into a distance matrix.

@@ -3,12 +3,17 @@
 #' @param table a dataframe or a matrix.
 #' @param col integer giving the column to be passed as row names.
 #' @param matrix logical. Is table a matrix? Default to \code{FALSE}.
-#' @param remove logical. If \code{TRUE} (default), shared zeros between species are removed for the computation of the pairwise correlation coefficients.
-#' @param fill logical. If \code{TRUE}, \code{NA} are set to 0. Default to \code{FALSE}.
+#' @param remove logical. If \code{TRUE} (default), shared zeros between
+#' species are removed for the computation of the pairwise correlation
+#' coefficients.
+#' @param fill logical. If \code{TRUE}, \code{NA} are set to 0. Default
+#' to \code{FALSE}.
 #' @inheritParams sim2dist
-#' @param ... arguments to be passed to \code{\link[stats]{cor}} such as \code{method} (see details).
+#' @param ... arguments to be passed to \code{\link[stats]{cor}} such
+#' as \code{method} (see details).
 #' @return \code{correlation_tree} returns a "phylo" object.
-#' @details For \code{method}: one of "pearson" (default), "kendall", or "spearman".
+#' @details For \code{method}: one of "pearson" (default), "kendall",
+#' or "spearman".
 #' @export
 #' @importFrom stats hclust
 #' @importFrom ape as.phylo

@@ -3,12 +3,15 @@
 #' @param L the list of all vector to be compared.
 #' @param remove logical. If \code{TRUE} (default), shared zeros are removed.
 #' @param .names character.
-#' @param ... arguments to be passed to \code{\link[stats]{cor}} such as \code{method} (see details).
-#' @return A similarity matrix of class \code{dist} with all correlation between vectors.
+#' @param ... arguments to be passed to \code{\link[stats]{cor}} such as
+#' \code{method} (see details).
+#' @return A similarity matrix of class \code{dist} with all correlation
+#' between vectors.
 #' @export
 #' @importFrom purrr map
 #' @importFrom stats as.dist cor
-#' @details For \code{method}: one of "pearson" (default), "kendall", or "spearman".
+#' @details For \code{method}: one of "pearson" (default), "kendall",
+#' or "spearman".
 #' @examples
 #' df <- data.frame(Clade = letters[1:4],
 #'                  v = c(3, 0, 0, 3),

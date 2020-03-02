@@ -21,13 +21,18 @@ correlation_tree(
 
 \item{matrix}{logical. Is table a matrix? Default to \code{FALSE}.}
 
-\item{remove}{logical. If \code{TRUE} (default), shared zeros between species are removed for the computation of the pairwise correlation coefficients.}
+\item{remove}{logical. If \code{TRUE} (default), shared zeros between
+species are removed for the computation of the pairwise correlation
+coefficients.}
 
-\item{fill}{logical. If \code{TRUE}, \code{NA} are set to 0. Default to \code{FALSE}.}
+\item{fill}{logical. If \code{TRUE}, \code{NA} are set to 0. Default
+to \code{FALSE}.}
 
-\item{transformation}{function or character. Transformation to apply to each element of the matrix.}
+\item{transformation}{function or character. Transformation to apply
+to each element of the matrix.}
 
-\item{...}{arguments to be passed to \code{\link[stats]{cor}} such as \code{method} (see details).}
+\item{...}{arguments to be passed to \code{\link[stats]{cor}} such
+as \code{method} (see details).}
 }
 \value{
 \code{correlation_tree} returns a "phylo" object.
@@ -36,7 +41,8 @@ correlation_tree(
 Compute the correlation tree from an abundance table.
 }
 \details{
-For \code{method}: one of "pearson" (default), "kendall", or "spearman".
+For \code{method}: one of "pearson" (default), "kendall",
+or "spearman".
 }
 \examples{
 df <- data.frame(Clade = letters[1:4],

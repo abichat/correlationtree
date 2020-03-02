@@ -11,6 +11,8 @@ future_dist_BHV(multiphylo)
 }
 \value{
 
+
+A distance matrix
 }
 \description{
 Wrapper around \code{distory::dist.multiPhylo()}.

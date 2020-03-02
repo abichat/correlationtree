@@ -13,16 +13,19 @@ cross_cor(L, remove = TRUE, .names = names(L), ...)
 
 \item{.names}{character.}
 
-\item{...}{arguments to be passed to \code{\link[stats]{cor}} such as \code{method} (see details).}
+\item{...}{arguments to be passed to \code{\link[stats]{cor}} such as
+\code{method} (see details).}
 }
 \value{
-A similarity matrix of class \code{dist} with all correlation between vectors.
+A similarity matrix of class \code{dist} with all correlation
+between vectors.
 }
 \description{
 Compute pairwise correlations within a list of vector.
 }
 \details{
-For \code{method}: one of "pearson" (default), "kendall", or "spearman".
+For \code{method}: one of "pearson" (default), "kendall",
+or "spearman".
 }
 \examples{
 df <- data.frame(Clade = letters[1:4],

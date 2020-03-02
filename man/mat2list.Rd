@@ -10,7 +10,8 @@ mat2list(mat)
 \item{mat}{matrix.}
 }
 \value{
-\code{mat2list} returns a named list whose each entry is a row of the original matrix.
+\code{mat2list} returns a named list whose each entry is a
+row of the original matrix.
 }
 \description{
 Convert a named matrix of abundance to a named list.

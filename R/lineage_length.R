@@ -33,7 +33,8 @@ lineage_length <- function(tree, label){
 #' @export
 #' @importFrom ape read.tree
 #' @importFrom purrr map_dbl
-#' @details A tree is ultrametric when the distances from the root to every branch tip are equal.
+#' @details A tree is ultrametric when the distances from the root to
+#' every branch tip are equal.
 #' @examples
 #' tree <- ape::read.tree(text = "(A:0.1,B:0.2,(C:0.3,D:0.4):0.5);")
 #' lineage_length(tree, "A")

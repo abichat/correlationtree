@@ -24,7 +24,6 @@ pairs_grid <- function(list) {
 #' @return \code{dist} object
 #' @importFrom stats as.dist
 #'
-#' @examples
 vec2dist <- function(vec) {
   m <- length(vec)
   n <- (1 + sqrt(1 + 8 * m)) / 2
@@ -50,7 +49,7 @@ vec2dist <- function(vec) {
 #' @importFrom rlang .data
 #' @export
 #'
-#' @examples
+#' @return A distance matrix
 future_dist_BHV <- function(multiphylo) {
   multiphylo %>%
     pairs_grid() %>%

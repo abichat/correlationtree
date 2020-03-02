@@ -18,7 +18,8 @@ A double.
 Compute the mean distance from the root to leafs.
 }
 \details{
-A tree is ultrametric when the distances from the root to every branch tip are equal.
+A tree is ultrametric when the distances from the root to
+every branch tip are equal.
 }
 \examples{
 tree <- ape::read.tree(text = "(A:0.1,B:0.2,(C:0.3,D:0.4):0.5);")
